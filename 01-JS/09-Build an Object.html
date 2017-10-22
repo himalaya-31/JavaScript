@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function computer(drive, ram, cpu){
+        this.drive = drive;
+        this.ram = ram;
+        this.cpu = cpu;
+      }
+
+      var mynewcomp = new computer("hard", "3GB", "Intel");
+    </script>
+    <script type="text/javascript">
+      document.write("The drive is " + mynewcomp.drive + "<br>" +
+      "Ram is of " + mynewcomp.ram + "<br>" +
+      "Cpu is " + mynewcomp.cpu);
+    </script>
+  </body>
+</html>

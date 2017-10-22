@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Access a JSON object using dot notation:</p>
+
+<p id="demo"></p>
+
+<script>
+
+var myObj, x;
+myObj = { "name":"John", "age":30, "car":null };
+x = myObj.name;
+document.getElementById("demo").innerHTML = x;
+
+</script>
+
+
+<p>Access a JSON object using bracket notation:</p>
+
+<p id="demo1"></p>
+
+<script>
+
+var myObj, x;
+myObj = { "name":"John", "age":30, "car":null };
+x = myObj["name"];
+document.getElementById("demo1").innerHTML = x;
+
+</script>
+
+<p>How to loop through all properties in a JSON object.</p>
+
+<p id="demo2"></p>
+
+<script>
+var myObj = { "name":"John", "age":30, "car":null };
+for (x in myObj) {
+    document.getElementById("demo2").innerHTML += x + "<br>";
+}
+</script>
+
+<p>Use bracket notation to access the property values.</p>
+
+<p id="demo3"></p>
+
+<script>
+var myObj = { "name":"John", "age":30, "car":null };
+for (x in myObj) {
+    document.getElementById("demo3").innerHTML += myObj[x] + "<br>";
+}
+</script>
+
+</body>
+</html>

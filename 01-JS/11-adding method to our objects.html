@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function people(name, age){
+        this.name = name;
+        this.age = age;
+        this.yearsUntilRetire = yearsLeft;
+      }
+
+      function yearsLeft(){
+        var yrs = 60 - this.age;
+        return yrs;
+      }
+
+      var himalaya = new people("Himalaya Baddhan", 20);
+      var shivam = new people("Shivam Mehra", 19);
+    </script>
+    <script type="text/javascript">
+      document.write(himalaya.name +"'s years left until retirement is " + himalaya.yearsUntilRetire());
+      document.write("<br>" + shivam.name +"'s years left until retirement is " + shivam.yearsUntilRetire());
+    </script>
+  </body>
+</html>

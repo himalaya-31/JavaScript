@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var movies = new Array("Gladiator", "Interstellar", "Inception", "Harry Potter", "Terminator 2");
+      var str = movies.join();
+      document.write(str + "<br>");
+
+      var str1 = movies.join(" - ");
+      document.write(str1);
+
+      movies.pop(); //last element of array has been popped out
+
+      document.write("<br>" + movies[4] + "<br>");
+
+      movies.reverse();
+      document.write(movies.join(", ") + "<br>");
+
+      movies.push("Terminator 2", "Dunkirk");
+      document.write("Pushed elements are " + movies[4] +", " + movies[5] + "<br>");
+
+      movies.sort();
+      document.write("Array after sort: " + movies.join(", ") + "<br>");
+    </script>
+  </body>
+</html>

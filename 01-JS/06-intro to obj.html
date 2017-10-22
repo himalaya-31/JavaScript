@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var text = "Hello World!";
+
+      document.write("My string is " + text + "<br>");
+      document.write("Length of the string is " + text.length + "<br>");
+      document.write("Converting into upper case letters " + text.toUpperCase() + "<br>");
+      document.write("Converting into lower case letters " + text.toLowerCase() + "<br>");
+      document.write(text.bold() + "<br>");
+      document.write(text.strike() + "<br>");
+      document.write(text.fontcolor("RED") + "<br>");
+      document.write("Index of \"World\" is " + text.indexOf("World") + "<br>");
+      document.write("Index of \"ash\" is " + text.indexOf("ash") + " because \"ash\" doesn't exist in the string." + "<br>");
+      document.write("Match " + text.match("World") + "<br>");
+      document.write("Not Match " + text.match("ash") + "<br>");
+      document.write("Replace \"World\" with \"Himalaya\": " + text.replace(/World/, "Himalaya") + "<br>");
+    </script>
+  </body>
+</html>

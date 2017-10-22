@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Validation</title>
+    <script type="text/javascript">
+      function validation(){
+        var username = document.forms['myForm']['username'].value;
+        var password = document.forms['myForm']['password'].value;
+        var i;
+        var j;
+
+        if(username == '' && password == ''){
+          alert("Please fill this out.");
+        }
+        else if (username == '') {
+          alert("Username can't be empty.");
+        }
+        else if (password == '') {
+          alert("Password can't be empty.");
+        }
+        else {
+          if(password.length >= 8){
+            for (i = 0; i < password.length; i++) {
+              if ((password[i] != '@' && password[i] != '!' && password[i] != '#' && password[i] != '&') && isNaN(password[i])) {
+                if(password[i] == password[i].toUpperCase()){
+                  break;
+                }
+              }
+            }
+            for (j = 0; j < password.length; j++) {
+              if(password[j] == '@' || password[j] == '!' || password[j] == '#' || password[j] == '&'){
+                break;
+              }
+            }
+            if(i == password.length && j == password.length){
+              alert("Password must contain an Upper Case Letter and a special character(!, @, #, &).");
+            }
+            else if (i == password.length) {
+              alert("Password must contain an Upper Case Letter.");
+            }
+            else if (j == password.length) {
+              alert("Password must contain a special character(!, @, #, &).")
+            }
+            else {
+              alert("You're registered successfully!");
+            }
+          }
+          else {
+            alert('Password must have atleast 8 characters.')
+          }
+        }
+        document.getElementById('message').innerHTML = "value of i = " + i + "<br>" + "value of j = " + j;
+      }
+    </script>
+  </head>
+  <body>
+    <form class="" name="myForm" action="" method="post">
+      Username: <input type="text" name="username" value="">
+      Password: <input type="text" name="password" value="">
+      <input type="button" name="" value="Submit" onclick="validation()"><br>
+      <p id="message"></p>
+    </form>
+  </body>
+</html>

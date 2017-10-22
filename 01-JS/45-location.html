@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"The full URL of this page is:<br>" + window.location.href;
+</script>
+
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo2").innerHTML =
+"Page hostname is: " + window.location.hostname;
+</script>
+
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML =
+"Page path is: " + window.location.pathname;
+</script>
+
+<p id="demo4"></p>
+
+<script>
+document.getElementById("demo4").innerHTML =
+"The page protocol is: " + window.location.protocol;
+</script>
+
+<p id="demo5"></p>
+
+<p><b>Note: </b>If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.</p>
+
+<script>
+document.getElementById("demo5").innerHTML =
+"The URL port number of the current page is: " + window.location.port;
+</script>
+
+<input type="button" value="Load new document" onclick="newDoc()">
+
+<script>
+function newDoc() {
+    window.location.assign("https://www.w3schools.com")
+}
+</script>
+
+</body>
+</html>
